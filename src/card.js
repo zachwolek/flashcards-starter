@@ -49,12 +49,16 @@ function endRound(round){
     return `** Round over! ** You answered ${round}% of the questions correctly!`
 }
 
+function countCards(deck){
+    return deck.length
+}
 module.exports = {
     createCard,
     evaluateGuess,
     createDeck,
     createRound,
-    takeTurn, 
+    // takeTurn, 
     calculatePercentCorrect,
-    endRound
+    endRound,
+    countCards
 }
