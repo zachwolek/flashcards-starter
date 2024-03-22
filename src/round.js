@@ -1,3 +1,11 @@
+const card1 = createCard(1, 'What is Mario\'s primary occupation?', ['Plumber', 'Chef', 'Carpenter'], 'Plumber');
+const card2 = createCard(2, 'What is the name of Link\'s legendary sword?', ['Excalibur', 'Master Sword', 'Frostmourne'], 'Master Sword');
+const card3 = createCard(3, 'What species is Yoshi?', ['Dinosaur', 'Turtle', 'Dragon'], 'Dinosaur');
+const card4 = createCard(4, 'Who is the main antagonist in the Legend of Zelda series?', ['Ganondorf', 'Bowser', 'King Dedede'], 'Ganondorf');
+const card5 = createCard(5, 'What is the name of the main character in the Metroid series?', ['Samus Aran', 'Daisy', 'Zelda'], 'Samus Aran');
+const deck = createDeck(card1, card2, card3, card4, card5)
+const round = createRound(deck)
+
 function createCard(id, question, answers, object){
     let card = {
         id: id,
@@ -45,7 +53,9 @@ function calculatePercentCorrect(round){
 }
 
 function endRound(round){
-    return `** Round over! ** You answered ${round}% of the questions correctly!`
+    let results = calculatePercentCorrect(round)
+    console.log(`** Round over! ** You answered ${results}% of the questions correctly!`)
+    return `** Round over! ** You answered ${results}% of the questions correctly!`
 }
 
 function countCards(deck){
