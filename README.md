@@ -1,3 +1,24 @@
+# README 
+
+# Abstract at the top (A sentence or two describing the project)
+This project simulates a five question trivia text game. After entering the command `node index.js` in the correct directory, the user will be guided through five multiple choice questions that confirm the answer and present an overall score. 
+
+## A GIF of the working application
+![Working Application](https://s3.ezgif.com/tmp/ezgif-3-af7a855705.gif)
+
+## Technologies used
+Javascript was the primary language used in the making of the flash card project. Being a text-based game, little technology outside of writing code on VS Code and pushing to GitHub was used. 
+
+## Install/Setup instructions
+1. Navigate to the project with https://github.com/zachwolek/flashcards-starter
+2. Copy the SSH key or use this git@github.com:zachwolek/flashcards-starter.git
+3. Open terminal in the directory you want to open inside
+4. Run command 'git clone git@github.com:zachwolek/flashcards-starter.git
+
+
+
+
+
 # FlashCards Starter Kit
 
 ## Fork This Repo
