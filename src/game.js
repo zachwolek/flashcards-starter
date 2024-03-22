@@ -2,13 +2,8 @@ const data = require('./data');
 const prototypeQuestions = data.prototypeData;
 const util = require('./util');
 const {
-  createCard,
-  evaluateGuess,
   createDeck,
   createRound,
-  takeTurn, 
-  calculatePercentCorrect,
-  endRound,
   countCards
 } = require('./card');
 

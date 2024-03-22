@@ -1,5 +1,5 @@
 function createCard(id, question, answers, object){
-    card = {
+    let card = {
         id: id,
         question: question,
         answers: answers,
@@ -45,7 +45,6 @@ function calculatePercentCorrect(round){
 }
 
 function endRound(round){
-    console.log(round)
     return `** Round over! ** You answered ${round}% of the questions correctly!`
 }
 
@@ -57,7 +56,7 @@ module.exports = {
     evaluateGuess,
     createDeck,
     createRound,
-    // takeTurn, 
+    takeTurn, 
     calculatePercentCorrect,
     endRound,
     countCards

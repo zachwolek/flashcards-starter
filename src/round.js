@@ -6,15 +6,20 @@ const card5 = createCard(5, 'What is the name of the main character in the Metro
 const deck = createDeck(card1, card2, card3, card4, card5)
 const round = createRound(deck)
 
-
 function createCard(id, question, answers, object){
-    card = {
+    let card = {
         id: id,
         question: question,
         answers: answers,
         correctAnswer: object
     }
     return card
+}
+
+function evaluateGuess(guess, correctAnswer){
+    if (guess === correctAnswer){
+        return 'correct!'
+    } else return 'incorrect!'
 }
 
 function createDeck(card1, card2, card3, card4, card5){
@@ -42,21 +47,27 @@ function takeTurn(guess, round){
     return evaluation
 }
 
-function evaluateGuess(guess, correctAnswer){
-    if (guess === correctAnswer){
-        return 'correct!'
-    } else return 'incorrect!'
+function calculatePercentCorrect(round){
+    let percent = (1 - (round.incorrectGuesses.length / round.turns)) * 100
+    return +percent.toFixed(0)
 }
 
 function endRound(round){
-    return "** Round over! ** You answered ${round}% of the questions correctly!"
+    let results = calculatePercentCorrect(round)
+    console.log(`** Round over! ** You answered ${results}% of the questions correctly!`)
+    return `** Round over! ** You answered ${results}% of the questions correctly!`
 }
 
+function countCards(deck){
+    return deck.length
+}
 module.exports = {
     createCard,
+    evaluateGuess,
     createDeck,
     createRound,
-    takeTurn,
-    evaluateGuess,
-    endRound
+    takeTurn, 
+    calculatePercentCorrect,
+    endRound,
+    countCards
 }
